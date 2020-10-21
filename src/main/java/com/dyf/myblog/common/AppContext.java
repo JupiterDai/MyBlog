@@ -49,7 +49,7 @@ public class AppContext implements Serializable {
 		return localContext.get();
 	}
 
-	public String getUsername() {
+	public String getUserName() {
 		return userName;
 	}
 
