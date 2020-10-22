@@ -3,7 +3,7 @@ package com.dyf.myblog.common.entity;
 
 import com.dyf.myblog.common.base.BasePO;
 
-public class UserInfo1 extends BasePO {
+public class UserInfo extends BasePO {
 	private Long id;
 	private String passWord;
 	private String userName;
