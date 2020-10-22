@@ -1,4 +1,4 @@
-package com.dyf.myblog.common.entity;
+package com.dyf.myblog.entity;
 
 import com.dyf.myblog.common.base.BasePO;
 

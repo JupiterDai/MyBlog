@@ -1,10 +1,10 @@
-package com.dyf.myblog.common.entity;
+package com.dyf.myblog.entity;
 
 import com.dyf.myblog.common.base.BasePO;
 
 public class ArticalInfo extends BasePO{
 	private Long id;
-	private byte[] articalContext;
+	private byte[] articalContent;
 	private String articalTitle;
 	public Long getId() {
 		return id;
@@ -12,11 +12,11 @@ public class ArticalInfo extends BasePO{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public byte[] getArticalContext() {
-		return articalContext;
+	public byte[] getArticalContent() {
+		return articalContent;
 	}
-	public void setArticalContext(byte[] articalContext) {
-		this.articalContext = articalContext;
+	public void setArticalContent(byte[] articalContent) {
+		this.articalContent = articalContent;
 	}
 	public String getArticalTitle() {
 		return articalTitle;
@@ -24,5 +24,6 @@ public class ArticalInfo extends BasePO{
 	public void setArticalTitle(String articalTitle) {
 		this.articalTitle = articalTitle;
 	}
+	
 	
 }
