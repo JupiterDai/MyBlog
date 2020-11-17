@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutionException;
 public class ORMCache implements ICache <Class<? extends BasePO>, ORMEntity> {
 
     private static final Logger log = LoggerFactory.getLogger(ORMCache.class);
-    public static final String KEY = "org.legion.aegis.common.cache.ORMCache";
+    public static final String KEY = "com.dyf.myblog.common.cache.ORMCache";
 
     static  {
         ORMCache ormCache = new ORMCache();

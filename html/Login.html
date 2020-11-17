@@ -1,0 +1,30 @@
+<!DOCTYPE> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Manage</title>
+</head>
+<body>
+<form name="loginform" method="POST">
+账号: 
+<input type="text" name="userName" id="username"><br>
+密码: 
+<input type="password" name="passWord" id="password"><br>
+<button type="button" class="btn btn-primary btn-block" onclick="login()">登录</button>
+</form>
+<script src="/MyBlog/js/jquery.min.js">
+// 前台传值方法
+function login() {
+       $.ajax({
+           type: "post", // 以post方式发起请求
+           url: "web/login", // 你的请求链接
+           data:$("#loginform").serialize(), // 对id为myForm的表单数据进行序列化并传递到后台
+           dateType:"jason"
+           success(data) {
+           
+           }
+       })
+   }
+</script>
+</body>
+</html>
