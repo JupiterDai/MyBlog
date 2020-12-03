@@ -26,7 +26,7 @@ public class GlobalInterceptor implements HandlerInterceptor {
             return true;
         } else {
                 response.sendRedirect("/web/login");
-                log.warn("Intercepted request: " + request.getRequestURL());
+                log.warn("Intercepted requests: " + request.getRequestURL());
                 return false;
          }
 		
