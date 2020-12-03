@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.dyf.myblog.DAO.UserInfoDao;
+import com.dyf.myblog.common.AppContext;
 import com.dyf.myblog.common.base.AjaxResponseBody;
 import com.dyf.myblog.common.utils.SpringUtils;
 import com.dyf.myblog.entity.UserInfo;
@@ -28,9 +29,13 @@ public class LoginResponse {
 	@PostMapping("/web/login")
 	@ResponseBody
 	public String logoin(UserInfo webuser, HttpServletRequest request) {
+		//从数据库读取
 		UserInfoDao dao = SpringUtils.getBean(UserInfoDao.class);
 		UserInfo info = dao.getUsername(webuser.getUsername());
 		if (info!=null&&info.getPassword().equals(webuser.getPassword())) {
+			AppContext context = new AppContext();
+			context.setAppContext();
+			context.setUserName(info.getUsername());
 			return "success";
 		} else {
 			return "fail";
