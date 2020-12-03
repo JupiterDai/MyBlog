@@ -27,7 +27,7 @@ function login(){
            dateType:"json",
            success: function(data){
            		if(data!=null&&data==="success"){
-           			location.href = "/";
+           			location.href = "/web/BlogPage";
            		}
            		else if(data==="fail"){
            			alert("密码错误或者账号不存在");
