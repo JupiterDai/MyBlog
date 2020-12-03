@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class BlogPageResponse{
-	@GetMapping("/BlogPage")
+	@GetMapping("/web/BlogPage")
 	public String blogPage() {
 		return "html/BlogPage.html";
 	}
