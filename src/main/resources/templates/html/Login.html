@@ -7,13 +7,13 @@
 </head>
 <body>
 <div class="login">
-<form id="loginform" method="POST">
-账号: 
-<input type="text" name="username" id="username"><br>
-密码: 
-<input type="password" name="password" id="password"><br>
-<button type="button" id="button" class="btn btn-primary btn-block"  onclick="login()">登录</button>
-</form>
+	<form id="loginform" method="POST">
+	账号: 
+	<input type="text" name="username" id="username"><br>
+	密码: 
+	<input type="password" name="password" id="password"><br>
+	<button type="button" id="button" onclick="login()">登录</button>
+	</form>
 </div>
 <script th:src="@{/jquery.min.js}"></script>
 </body>
@@ -27,7 +27,7 @@ function login(){
            dateType:"json",
            success: function(data){
            		if(data!=null&&data==="success"){
-           			location.href = "https://www.baidu.com";
+           			location.href = "/";
            		}
            		else if(data==="fail"){
            			alert("密码错误或者账号不存在");

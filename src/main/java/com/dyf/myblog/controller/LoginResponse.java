@@ -21,8 +21,8 @@ import com.sun.jdi.connect.spi.Connection;
 public class LoginResponse {
 	@GetMapping("/web/login")
 	public String loginPage() {
+		//return "html/Login.html";
 		return "html/Login.html";
-
 	}
 	
 	@PostMapping("/web/login")
