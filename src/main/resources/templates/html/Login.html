@@ -1,22 +1,15 @@
-<!DOCTYPE> 
+<!DOCTYPE html>
 <html lang="zh-Hans-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8">
-<title>Manage</title>
-<link rel="stylesheet" th:href="@{/LoginPage.css}">
-</head>
-<body>
-<div class="login">
-	<form id="loginform" method="POST">
-	账号: 
-	<input type="text" name="username" id="username"><br>
-	密码: 
-	<input type="password" name="password" id="password"><br>
-	<button type="button" id="button" onclick="login()">登录</button>
-	</form>
-</div>
+   <title>Login</title>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1,, shrink-to-fit=no">
+   <!--bootstrap css--> -->
+   <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.css}">
+   <link rel="stylesheet" type="text/css" th:href="@{/loginpage.css}">
 <script th:src="@{/jquery.min.js}"></script>
-</body>
 <script>
 // 前台传值方法
 function login(){
@@ -36,4 +29,42 @@ function login(){
        })
    }
 </script>
+</head>     
+<body>
+   <div class="container">
+      <div class="row">
+		   <div  class="col-md-5 mx-auto">
+			   <div id="">
+				
+               <div class="login from ">
+                        <div class="logo mb-3">
+                           <div class="col-md-12 text-center">
+                              <h1 >Login</h1>
+                           </div>
+                        </div>
+                        <form id="loginform" method="POST">
+                   
+                           <div class="form-group">
+                              <label for="username">User Name</label>
+                              <input type="text"  name="username" class="form-control" id="username"  placeholder="Enter Username">
+                           </div>
+                         
+                           <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" name="password" id="password"  class="form-control"  placeholder="Enter Password">
+                           </div>
+                           <div class="col-md-12 text-center mb-3">
+                              <button type="button" id="buttom" class=" btn btn-block mybtn btn-primary" onclick="login()">登录</button>
+                           </div>
+                        </form>
+               </div>  
+				
+			   </div>
+			  
+		   </div> 
+      </div> 
+
+   </div> 
+</body>
+
 </html>
