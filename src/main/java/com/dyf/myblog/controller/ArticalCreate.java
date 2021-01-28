@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class BlogPageResponse{
-	@GetMapping("/web/BlogPage")
-	public String blogPage() {
-		return "html/BlogPage.html";
-	}
+public class ArticalCreate{
+    @GetMapping("/web/createArtical")
+    public String blogPage() {
+        return "html/createArtical";
+    }
 }
